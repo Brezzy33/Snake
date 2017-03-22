@@ -10,10 +10,9 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(120, 30);
+            Console.SetBufferSize(120, 30); //Устанавливаем размер окна без скроллбара 
 
-            
-
+            //Создаем рамку
             HorLine upline = new HorLine(0, 118, 0, '+');
             HorLine downline = new HorLine(0, 118, 29, '+');
             downline.Draw();
@@ -23,11 +22,11 @@ namespace Snake
             Vert rightvline = new Vert(0, 29, 118, '+');
             rightvline.Draw();
             leftvline.Draw();
-            
+
+            //Точка
             Point p = new Point(4, 5, '*');
             p.Draw();
-            Console.ReadLine();
-            
+            Console.ReadLine(); 
         }
     }
 }
