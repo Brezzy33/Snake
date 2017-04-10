@@ -11,11 +11,6 @@ namespace Snake
         public int x;
         public int y;
         public char sym;
-
-        public Point()
-        {
-            
-        }
         
         public Point(int _x,int _y,char _sym)
         {
