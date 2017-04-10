@@ -25,8 +25,9 @@ namespace Snake
 
             //Точка
             Point p = new Point(4, 5, '*');
-            p.Draw();
-            Console.ReadLine(); 
+            Snake snake = new Snake( p, 5, Direction.RIGHT); //Змейка длинной 5 сим
+            snake.Draw();
+            Console.ReadLine();
         }
     }
 }

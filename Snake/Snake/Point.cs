@@ -19,6 +19,35 @@ namespace Snake
             sym = _sym;
         }
 
+        public Point (Point p) //Задавать точки с помощью другой точки
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move (int offset,Direction direction)//Сдвигает данную точку на расстояние по направлению
+        {
+            if (direction == Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if (direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction==Direction.UP)
+            {
+                y = y + offset;
+            }
+            else if (direction==Direction.DOWN)
+            {
+                y = y - offset;
+            }
+        }
+
+
+
         public void Draw()
         {
             Console.SetCursorPosition(x,y);
