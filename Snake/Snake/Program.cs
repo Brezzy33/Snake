@@ -10,15 +10,22 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
+            Console.SetBufferSize(120, 30);
 
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();
+            
 
-            HorLine line = new HorLine(5, 10, 8, '+');
-            line.Draw();
-
+            HorLine upline = new HorLine(0, 118, 0, '+');
+            HorLine downline = new HorLine(0, 118, 29, '+');
+            downline.Draw();
+            upline.Draw();
+            
+            Vert leftvline = new Vert(0, 29, 0, '+');
+            Vert rightvline = new Vert(0, 29, 118, '+');
+            rightvline.Draw();
+            leftvline.Draw();
+            
+            Point p = new Point(4, 5, '*');
+            p.Draw();
             Console.ReadLine();
             
         }
